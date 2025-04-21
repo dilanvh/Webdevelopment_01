@@ -1,0 +1,16 @@
+let num1 = 12;
+let num2 = 8;
+let sum = num1 + num2;
+let difference = num1 - num2;
+let product = num1 * num2;
+let quotient = num1 / num2;
+console.log("Sum:", sum);
+console.log("Difference:", difference);
+console.log("Product:", product);
+console.log("Quotient:", quotient);
+console.log("num1 > num2:", num1 > num2);
+console.log("num1 < num2:", num1 < num2);
+console.log("num1 == num2:", num1 == num2);
+console.log("num1 === num2:", num1 === num2);
+console.log("num1 != num2:", num1 != num2);
+console.log("num1 !== num2:", num1 !== num2);

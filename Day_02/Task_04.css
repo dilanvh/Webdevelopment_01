@@ -1,0 +1,33 @@
+body
+{
+    background-color: lightblue;
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+.background-image-div 
+{
+    background-image: url('background.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.gradient-paragraph
+{
+    background: linear-gradient(90deg, lightgreen, lightcoral);
+    padding: 20px;
+    border-radius: 8px;
+    color: white;
+    font-weight: bold;
+}
+.border-box 
+{
+    border: 5px solid teal;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 15px;
+    width: 300px;
+    display: inline-block;
+}

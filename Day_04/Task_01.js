@@ -1,0 +1,12 @@
+let stringVar = "Hello, World!";
+let numberVar = 42;
+let booleanVar = true;
+let undefinedVar;
+let nullVar = null;
+let objectVar = { name: "John", age: 30 };
+console.log("Type of stringVar: ", typeof stringVar);
+console.log("Type of numberVar: ", typeof numberVar);
+console.log("Type of booleanVar: ", typeof booleanVar);
+console.log("Type of undefinedVar: ", typeof undefinedVar);
+console.log("Type of nullVar: ", typeof nullVar);
+console.log("Type of objectVar: ", typeof objectVar);
