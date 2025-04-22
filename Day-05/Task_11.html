@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Strength Checker</title>
+</head>
+<body>
+    <h1>Password Strength Checker</h1>
+    <form>
+        <label for="password">Enter Password: </label>
+        <input type="password" id="password" oninput="checkPasswordStrength()">
+        <span id="password-strength"></span>
+    </form>
+
+    <script>
+        function checkPasswordStrength() {
+            let password = document.getElementById("password").value;
+            let strength = "Weak";
+            if (password.length < 8) {
+                document.getElementById("password-strength").innerHTML = strength;
+            } else if (password.match(/[a-z]/i) && password.match(/[0-9]/) && password.match(/[!@#$%^&*(),.?":{}|<>/]/)) {
+                strength = "Strong";
+                document.getElementById("password-strength").innerHTML = strength;
+            } else {
+                strength = "Medium";
+                document.getElementById("password-strength").innerHTML = strength;
+            }
+        }
+    </script>
+</body>
+</html>
+

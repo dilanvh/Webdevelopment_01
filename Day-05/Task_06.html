@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Elements</title>
+    <style>
+        button {
+            margin-bottom: 10px;
+        }
+        p {
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <button onclick="addParagraph()">Add Paragraph</button>
+    <div id="container"></div>
+
+    <script>
+        function addParagraph() {
+            let para = document.createElement("p");
+            para.textContent = "Click me to remove!";
+            para.onclick = function() {
+                this.remove();
+            };
+            document.getElementById("container").appendChild(para);
+        }
+    </script>
+</body>
+</html>

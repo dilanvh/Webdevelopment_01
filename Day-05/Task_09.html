@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phone Number Validation</title>
+    <style>
+        #message {
+            margin-top: 10px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <form onsubmit="validatePhoneNumber(event)">
+        <label for="phone">Enter Phone Number (XXX) XXX-XXXX:</label>
+        <input type="text" id="phone" placeholder="(123) 456-7890">
+        <button type="submit">Validate</button>
+    </form>
+    <div id="message"></div>
+
+    <script>
+        function validatePhoneNumber(event) {
+            event.preventDefault(); // Prevent form submission
+            const phoneInput = document.getElementById("phone").value;
+            const regex = /^\(\d{3}\) \d{3}-\d{4}$/;
+            const messageElement = document.getElementById("message");
+
+            if (regex.test(phoneInput)) {
+                messageElement.textContent = "Valid phone number!";
+                messageElement.style.color = "green";
+            } else {
+                messageElement.textContent = "Invalid phone number format. Please use (XXX) XXX-XXXX.";
+                messageElement.style.color = "red";
+            }
+        }
+    </script>
+
+</body>
+</html>

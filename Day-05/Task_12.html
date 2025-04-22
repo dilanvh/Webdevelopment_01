@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Email Validation</title>
+    <style>
+        .error {
+            color: red;
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+<body>
+
+    <form id="emailForm">
+        <label for="email">Email:</label>
+        <input type="text" id="email">
+        <span class="error" id="emailError"></span>
+        <br><br>
+        <button type="submit">Submit</button>
+    </form>
+
+    <script>
+        document.getElementById("emailForm").addEventListener("submit", function(event) {
+            const emailInput = document.getElementById("email").value.trim();
+            const emailError = document.getElementById("emailError");
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            
+            emailError.textContent = "";
+
+            if (!emailRegex.test(emailInput)) {
+                emailError.textContent = "Invalid email format. Please use example@domain.com.";
+                event.preventDefault();
+            }
+        });
+    </script>
+
+</body>
+</html>
